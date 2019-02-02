@@ -1,0 +1,15 @@
+html, body{
+  height: 100%;
+  margin: 0;
+
+  background: black;
+
+  font-family: 'Trebuchet MS';
+  color: white;
+  font-size: 4.5vw;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+}

@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/ybart/infogare#readme",
   "dependencies": {
+    "handlebars": "^4.0.12",
+    "handlebars-loader": "^1.7.1",
     "jquery": "^3.3.1",
     "moment": "^2.24.0"
   },

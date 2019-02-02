@@ -1,0 +1,108 @@
+.screen {
+  width: 100vw;
+  height: 56.25vw;
+
+  display: grid;
+  grid-auto-rows: 10%;
+
+  background: gold;
+}
+
+.line {
+  display: grid;
+}
+
+.odd, .even { grid-template-columns: 1.5fr 1.5fr 3fr 12.5fr 1.5fr; }
+.stops-container { grid-template-columns: 1.5fr 17fr 1.5fr; }
+
+.odd { background: #4A8CF8; }
+.even { background: #0834F3; }
+
+.info {
+  position: relative;
+  background: #6B4DFF;
+  grid-row: 9/11;
+  overflow: hidden;
+
+  font-size: 2.5vw;
+  padding: 1vw 1vw 1vw 4.2vw;
+}
+
+.brand {
+  padding-top: 1.3vw;
+  font-size: 1.4vw;
+  text-align: center;
+}
+.mission {
+  padding-top: 1.1vw;
+  font-size: 2.8vw;
+  text-align: center;
+}
+.time, .track {
+  text-align: center;
+}
+.track {
+  margin: 0;
+  padding-top: 0;
+}
+.time {
+  padding-top: 0.8vw;
+  color: #F9F958;
+  font-size: 3.8vw;
+  font-weight: bold;
+  letter-spacing: -0.22vw;
+}
+.stops {
+  padding-top: 0.7vw;
+  font-size: 3.8vw;
+  overflow: hidden;
+}
+
+.marquee20 {
+  white-space: nowrap;
+  animation: marquee20 20s linear infinite;
+}
+
+.marquee50 {
+  white-space: nowrap;
+  animation: marquee50 50s linear infinite;
+}
+
+.square {
+  width: 40%;
+}
+
+.track-outer {
+  position: absolute;
+  padding: 0.3vw;
+  margin: 0.4vw 0.4vw 0.4vw 1.5vw;
+
+  border: 0.2vw solid white;
+  border-radius: 0.5vw;
+
+  font-size: 3vw;
+}
+
+@keyframes marquee20 {
+ 0%   {
+   transform: translateX(0%);
+ }
+ 5%   {
+   transform: translateX(0%);
+ }
+ 100% {
+   transform: translateX(-290%);
+ }
+}
+
+@keyframes marquee50 {
+ 0%   {
+   transform: translateX(0%);
+ }
+ 2%   {
+   transform: translateX(0%);
+ }
+ 100% {
+   transform: translateX(-880%);
+ }
+}
