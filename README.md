@@ -9,5 +9,5 @@ screens.
 
 ```
 npm install
-npm start
+npm run start:dev
 ```

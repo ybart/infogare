@@ -2,9 +2,10 @@
   "name": "infogare",
   "version": "0.1.0-dev",
   "description": "Displays train departures and traffic information mimicking SNCF Infogare screens",
-  "main": "app.js",
+  "private": "true",
   "scripts": {
-    "start": "node app.js",
+    "build": "webpack",
+    "start:dev": "webpack-dev-server --open",
     "test": "mocha"
   },
   "repository": {
@@ -18,7 +19,14 @@
   },
   "homepage": "https://github.com/ybart/infogare#readme",
   "dependencies": {
-    "connect": "^3.6.6",
-    "serve-static": "^1.13.2"
+    "moment": "^2.24.0"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^4.6.0",
+    "moment-locales-webpack-plugin": "^1.0.7",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14",
+    "write-file-webpack-plugin": "^4.5.0"
   }
 }
