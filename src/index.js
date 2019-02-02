@@ -1,6 +1,8 @@
 var moment = require('moment');
 var $ = require('jquery');
 
+import secrets from './config/secrets.js'
+
 moment().format();
 
 var updateClock = function() {
