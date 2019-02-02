@@ -1,0 +1,24 @@
+{
+  "name": "infogare",
+  "version": "0.1.0-dev",
+  "description": "Displays train departures and traffic information mimicking SNCF Infogare screens",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ybart/infogare.git"
+  },
+  "author": "Yvan BARTHÉLEMY",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ybart/infogare/issues"
+  },
+  "homepage": "https://github.com/ybart/infogare#readme",
+  "dependencies": {
+    "connect": "^3.6.6",
+    "serve-static": "^1.13.2"
+  }
+}

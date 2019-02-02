@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Infogare</title>
+    <style media="screen">
+      html, body{
+        height: 100%;
+        margin: 0;
+
+        background: black;
+
+        font-family: 'Trebuchet MS';
+        color: white;
+        font-size: 4.5vw;
+      }
+
+      .content {
+        width: 100%;
+        height: 100%;
+      }
+
+      .screen {
+        width: 100vw;
+        height: 56.25vw;
+
+        display: grid;
+        grid-auto-rows: 10%;
+
+        background: gold;
+      }
+
+      .line {
+        display: grid;
+      }
+
+      .odd, .even { grid-template-columns: 1.5fr 1.5fr 3fr 12.5fr 1.5fr; }
+      .stops-container { grid-template-columns: 1.5fr 17fr 1.5fr; }
+
+      .odd { background: #4A8CF8; }
+      .even { background: #0834F3; }
+
+      .info {
+        position: relative;
+        background: #6B4DFF;
+        grid-row: 9/11;
+        overflow: hidden;
+
+        font-size: 2.5vw;
+        padding: 1vw 1vw 1vw 4.2vw;
+      }
+
+      .brand {
+        padding-top: 1.3vw;
+        font-size: 1.4vw;
+        text-align: center;
+      }
+      .mission {
+        padding-top: 1.1vw;
+        font-size: 2.8vw;
+        text-align: center;
+      }
+      .time, .track {
+        text-align: center;
+      }
+      .track {
+        margin: 0;
+        padding-top: 0;
+      }
+      .time {
+        padding-top: 0.8vw;
+        color: #F9F958;
+        font-size: 3.8vw;
+        font-weight: bold;
+        letter-spacing: -0.22vw;
+      }
+      .stops {
+        padding-top: 0.7vw;
+        font-size: 3.8vw;
+        overflow: hidden;
+      }
+
+      .marquee20 {
+        white-space: nowrap;
+        animation: marquee20 20s linear infinite;
+      }
+
+      .marquee50 {
+        white-space: nowrap;
+        animation: marquee50 50s linear infinite;
+      }
+
+      .square {
+        width: 40%;
+      }
+
+      .clock {
+        position: absolute;
+        bottom: 0;
+        right: 1vw;
+        width: 11.5vw;
+        height: 3vw;
+
+        margin: 0;
+        padding-left: 1.5vw;
+        padding-top: 0.3vw;
+        padding-bottom: 0.3vw;
+
+        border: 0.3vw solid white;
+        border-bottom: none;
+        border-radius: 0.5vw 0.5vw 0 0;
+
+        background: #0834F3;
+        font-size: 2.8vw;
+        font-weight: bold;
+        letter-spacing: -0.18vw;
+      }
+
+      .clock-tick {
+        display: inline-block;
+        padding-left: 1vw;
+        font-size: 1.8vw;
+        color: #ffaa00;
+        letter-spacing: -0.1vw;
+      }
+
+      .track-outer {
+        position: absolute;
+        padding: 0.3vw;
+        margin: 0.4vw 0.4vw 0.4vw 1.5vw;
+
+        border: 0.2vw solid white;
+        border-radius: 0.5vw;
+
+        font-size: 3vw;
+      }
+
+      @keyframes marquee20 {
+       0%   {
+         transform: translateX(0%);
+       }
+       5%   {
+         transform: translateX(0%);
+       }
+       100% {
+         transform: translateX(-290%);
+       }
+      }
+
+      @keyframes marquee50 {
+       0%   {
+         transform: translateX(0%);
+       }
+       2%   {
+         transform: translateX(0%);
+       }
+       100% {
+         transform: translateX(-880%);
+       }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="screen">
+        <div class="line odd">
+          <div class="brand">
+            <img class="square" src="assets/images/rer.png" alt="RER">
+            <img class="square" src="assets/images/rerd.png" alt="D">
+          </div>
+          <div class="mission">SOPA</div>
+          <div class="time">21:19</div>
+          <div class="destination">Creil</div>
+          <div class="track"><div class="track-outer">1M</div></div>
+        </div>
+        <div class="line odd stops-container">
+          <div></div>
+          <div class="stops">
+            <div class="marquee50">
+              Villeneuve-Saint-Georges
+              • Villeneuve Triage
+              • Créteil Pompadour
+              • Le Vert de Maisons
+              • Maisons-Alfort-Alfortville
+              • Paris Gare de Lyon
+              • Châtelet-Les-Halles
+              • Paris Gare du Nord
+              • Stade de France Saint-Denis
+              • Saint-Denis
+              • Pierrefitte-Stains
+              • Garges-Sarcelles
+              • Villiers-le-Bel Gonnesse-Arnouville
+              • Goussainville
+              • Les Noues
+              • Louvres
+              • Survilliers-Fosses
+              • La Borne Blanche
+              • Orry-la-Ville Coye
+              • Chantilly-Gouvieux
+              • Creil
+            </div>
+          </div>
+        </div>
+        <div class="line even">
+          <div class="brand">
+            <img class="square" src="assets/images/rer.png" alt="RER">
+            <img class="square" src="assets/images/rerd.png" alt="D">
+          </div>
+          <div class="mission">DOPA</div>
+          <div class="time">21:30</div>
+          <div class="destination">Paris Gare de Lyon</div>
+          <div class="track"><div class="track-outer">1M</div></div>
+        </div>
+        <div class="line even stops-container">
+          <div></div>
+          <div class="stops">
+            <div class="marquee20">
+              Villeneuve-Saint-Georges
+              • Villeneuve Triage
+              • Créteil Pompadour
+              • Le Vert de Maisons
+              • Maisons-Alfort-Alfortville
+              • Paris Gare de Lyon
+            </div>
+          </div>
+        </div>
+        <div class="line odd">
+          <div class="brand">
+            <img class="square" src="assets/images/rer.png" alt="RER">
+            <img class="square" src="assets/images/rerd.png" alt="D">
+          </div>
+          <div class="mission">SOPA</div>
+          <div class="time">21:49</div>
+          <div class="destination">Creil</div>
+          <div class="track"><div class="track-outer">1M</div></div>
+        </div>
+        <div class="line even">
+          <div class="brand">
+            <img class="square" src="assets/images/rer.png" alt="RER">
+            <img class="square" src="assets/images/rerd.png" alt="D">
+          </div>
+          <div class="mission">DOPA</div>
+          <div class="time">22:00</div>
+          <div class="destination">Paris Gare de Lyon</div>
+          <div class="track"><div class="track-outer">1M</div></div>
+        </div>
+        <div class="line odd">
+          <div class="brand">
+            <img class="square" src="assets/images/rer.png" alt="RER">
+            <img class="square" src="assets/images/rerd.png" alt="D">
+          </div>
+          <div class="mission">SOPA</div>
+          <div class="time">22:19</div>
+          <div class="destination">Creil</div>
+          <div class="track"><div class="track-outer">1M</div></div>
+        </div>
+        <div class="line even">
+          <div class="brand">
+            <img class="square" src="assets/images/rer.png" alt="RER">
+            <img class="square" src="assets/images/rerd.png" alt="D">
+          </div>
+          <div class="mission">DOPA</div>
+          <div class="time">22:30</div>
+          <div class="destination">Paris Gare de Lyon</div>
+          <div class="track"><div class="track-outer">1M</div></div>
+        </div>
+        <div class="line info">
+          Entre 23h00 et 23h30, les dessertes sont modifiées.
+          A partir de 23h30 le trafic est interrompu entre Juvisy et Corbeil,
+          un service de bus de remplacement est mis en place.
+          <div class="clock">
+            21:00<span class="clock-tick">49</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
